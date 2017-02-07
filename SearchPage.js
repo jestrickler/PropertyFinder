@@ -49,6 +49,7 @@ var styles = StyleSheet.create({
   searchInput: {
     height: 36,
     padding: 4,
+    marginBottom: 10,
     marginRight: 5,
     flex: 4,
     fontSize: 18,
@@ -155,6 +156,7 @@ export default class SearchPage extends Component {
         </Text>
         <View style={styles.flowRight}>
           <TextInput style={styles.searchInput}
+            underlineColorAndroid='transparent'
             value={this.state.searchString}
             onChange={this.onSearchTextChanged.bind(this)}
             placeholder='Search via name or postcode'/>

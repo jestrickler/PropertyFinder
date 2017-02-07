@@ -12,6 +12,9 @@ import {
 import PropertyView from './PropertyView'
 
 var styles = StyleSheet.create({
+  container: {
+    marginTop: 65
+  },
   thumb: {
     width: 80,
     height: 80,
@@ -83,7 +86,7 @@ export default class SearchResults extends Component {
 
   render() {
     return (
-      <ListView
+      <ListView style={styles.container}
         dataSource={this.state.dataSource}
         renderRow={this.renderRow.bind(this)}/>
     );
